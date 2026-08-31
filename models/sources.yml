@@ -1,0 +1,9 @@
+sources:
+  - name: my_source
+    database: DBT_PRACTICE
+    schema: RAW_AWS_S3
+    tables:
+      - name: bike 
+        identifier: BIKE_RIDES
+      - name: weather
+        identifier: WEATHER_DATA
