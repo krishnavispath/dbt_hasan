@@ -1,3 +1,10 @@
+{{ 
+    config(
+        materialized = 'incremental',
+        on_schema_change = 'fail'
+    )
+}}
+
 with trips as(
     select 
     ride_id,
@@ -9,3 +16,7 @@ with trips as(
     from {{ ref('stg_bike') }}
 )
 select * from trips
+
+{% if is_incremental() %}
+    where trip_date > (select max(trip_date) from {{ this }})
+{% endif %}

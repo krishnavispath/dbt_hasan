@@ -1,0 +1,5 @@
+station_type_code,station_type_name,description
+classic_bike,Standard Bike Station,Regular bike docking station
+electric_bike,Electric Bike Station,Station supporting electric bikes
+docked_bike,Docked Bike Station,Station with physical bike docks
+virtual_bike,Virtual Station,Station without physical docking infrastructure
