@@ -38,3 +38,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   my_new_project:
     +materialized: table
+data_tests: 
+  +store_failures: true
+  +schema: _dbt_test_results

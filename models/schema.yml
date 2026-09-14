@@ -1,0 +1,18 @@
+models:
+  - name: station_dimension
+    columns:
+
+      - name: station_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: station_type_code
+        data_tests:
+          - accepted_values:
+              arguments: 
+                values: ['classic_bike',
+                          'docked_bike',
+                          'electric_bike']
+          
+          
