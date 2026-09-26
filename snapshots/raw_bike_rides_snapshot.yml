@@ -1,0 +1,9 @@
+snapshots:
+  - name: scd_raw_bike_rides
+    relation: source('my_source','bike')
+    config:
+      unique_key: RIDE_ID
+      strategy: timestamp 
+      updated_at: updated_at
+      hard_deletes: invalidate
+  
